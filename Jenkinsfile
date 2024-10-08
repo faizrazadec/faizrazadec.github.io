@@ -10,10 +10,10 @@ pipeline {
             }
         }
 
-        stage('Install Dependencies') {
+        stage('Clean Install') {
             steps {
-                echo 'Clearing npm cache...'
-                sh 'sudo docker run node:20.18.0 npm cache clean --force'
+                echo 'Removing node_modules and package-lock.json...'
+                sh 'sudo docker run node:20.18.0 rm -rf node_modules package-lock.json'
 
                 echo 'Installing npm dependencies...'
                 sh 'sudo docker run node:20.18.0 npm install'
