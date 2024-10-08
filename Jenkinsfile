@@ -1,10 +1,6 @@
 pipeline {
     agent any  // This will allow the pipeline to run on any available agent
 
-    environment {
-        NODE_VERSION = '20.18.0'  // Specify your Node.js version if necessary
-    }
-
     stages {
         stage('Checkout') {
             steps {
