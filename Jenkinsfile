@@ -2,7 +2,11 @@ pipeline {
     agent any
 
     tools {
-        nodejs "node"
+        nodejs "Node"  // Ensure this matches the name of the Node.js installation in Jenkins
+    }
+
+    environment {
+        GITHUB_TOKEN = credentials('github-token')  // GitHub PAT stored as Jenkins credentials
     }
 
     stages {
@@ -13,54 +17,38 @@ pipeline {
                 echo 'Code checkout completed.'
             }
         }
-
-        stage('Clean Install') {
+        
+        stage('Install Dependencies') {
             steps {
-                echo 'Removing node_modules and package-lock.json...'
-                sh 'sudo docker run node:20.18.0 rm -rf node_modules package-lock.json'
-
-                echo 'Installing npm dependencies...'
-                sh 'sudo docker run node:20.18.0 npm install'
-                echo 'Npm dependencies installed successfully.'
+                // Install npm dependencies
+                sh 'npm install'
             }
         }
-
-        stage('Run Tests') {
-            steps {
-                echo 'Running tests...'
-                // Run your tests
-                sh 'npm test'  // Adjust the command if you have specific test scripts
-                echo 'Tests completed successfully.'
-            }
-        }
-
+        
         stage('Build') {
             steps {
-                echo 'Building the React project...'
                 // Build your React project
                 sh 'npm run build'
-                echo 'Build completed successfully.'
             }
         }
-
+        
         stage('Deploy to GitHub Pages') {
             steps {
-                echo 'Installing gh-pages for deployment...'
-                // Install gh-pages and deploy to GitHub Pages
-                sh 'npm install gh-pages --save-dev'
-                echo 'Deploying to GitHub Pages...'
-                sh 'npm run deploy'
-                echo 'Deployment to GitHub Pages completed successfully.'
+                // Set GitHub token as an environment variable for the deploy command
+                withEnv(["GITHUB_TOKEN=${env.GITHUB_TOKEN}"]) {
+                    // Deploy to GitHub Pages using the token for authentication
+                    sh 'npm run deploy'
+                }
             }
         }
     }
 
     post {
         success {
-            echo 'Deployment successful!'
+            echo 'Pipeline executed successfully!'
         }
         failure {
-            echo 'Deployment failed.'
+            echo 'Pipeline failed.'
         }
     }
 }
