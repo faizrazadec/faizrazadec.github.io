@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    triggers {
+        cron('H/5 * * * *') // This will trigger the job every 5 minutes
+    }
+
     tools {
         nodejs "Node"  // Ensure this matches the name of the Node.js installation in Jenkins
     }
