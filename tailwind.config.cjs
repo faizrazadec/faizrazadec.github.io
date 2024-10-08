@@ -18,14 +18,14 @@ export default {
         taupe: '#9999a1',
         silver: '#d6d6d6',
         dim: '#66666e',
-        battleGray: '#858585',
+        battleGray: '#6FC3DF',
         french: '#b5b5ba',
         night: '#141414',
         jet: '#292929',
         jetLight: '#333333',
         jetGray: '#6d6d74',
         richBlack: '#2e2e2e',
-        eerieBlack: '#1f1f1f',
+        eerieBlack: '#fcfcfc',
         onyx: '#5b5b5b',
       },
       boxShadow: {
@@ -49,9 +49,9 @@ export default {
           "linear-gradient(135deg, rgba(244,244,246,0.5) 60%, rgba(10,10,10,0.2) 100%),url('/src/assets/backgrounds/white-abstract.png')",
         experienceLight:
           'linear-gradient(137deg, rgba(244,244,246,0.5) 60%, rgba(10,10,10,0.9) 60%)',
-        hero: 'linear-gradient(135deg, rgba(244,244,246,0.8) 60%, rgba(10,10,10,0.95) 60%)',
-        'hero-mobile':
-          'linear-gradient(137deg, rgba(244,244,246,0.8) 60%, rgba(10,10,10,1) 60%)',
+        // hero: 'linear-gradient(135deg, rgba(244,244,246,0.8) 60%, rgba(10,10,10,0.95) 60%)',
+        // 'hero-mobile':
+        //   'linear-gradient(137deg, rgba(244,244,246,0.8) 60%, rgba(10,10,10,1) 60%)',
         tech: "linear-gradient(165deg, rgba(20,20,20,0.8) 100%, rgba(109,109,116,0.8) 100%), url('/src/assets/backgrounds/nairobi.png')",
       },
       fontFamily: {

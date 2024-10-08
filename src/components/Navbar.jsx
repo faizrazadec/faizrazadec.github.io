@@ -10,8 +10,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-2 fixed 
-      top-0 z-20 bg-flashWhite sm:opacity-[0.97] xxs:h-[12vh]`}>
+      className={`${styles.paddingX} w-full flex items-center py-2 h-12 fixed 
+      top-0 z-20 bg-battleGray sm:opacity-[1] xxs:h-[12vh]`}>
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to="/"
@@ -31,8 +31,12 @@ const Navbar = () => {
           <img
             src={logotext}
             alt="logo"
-            className="sm:w-[90px] sm:h-[90px] w-[85px] h-[85px] -ml-[0.6rem] object-contain"
+            className="sm:w-[300px] sm:h-[90px] w-[85px] h-[85px] -ml-[0.6rem] object-contain"
           />
+
+          {/* <span className={`${styles.logotext} text-eerieBlack lg:text-[20px] text-[20px] font-semibold uppercase tracking-wide -mt-0.45`}>
+            Faiz Raza | AI Engineer
+          </span> */}
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-14 mt-2">
           {navLinks.map((nav) => (
