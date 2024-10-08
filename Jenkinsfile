@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'React_Portfolio'  // Specify the Docker agent you've created
+        label 'react_portfolio'  // Specify the Docker agent you've created
     }
 
     environment {
