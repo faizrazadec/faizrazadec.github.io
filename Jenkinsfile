@@ -12,7 +12,7 @@ pipeline {
             steps {
                 echo 'Checking out the code from the repository...'
                 // Cloning your GitHub repository
-                git 'https://github.com/faizrazadec/faizrazadec.github.io.git'
+                git branch: 'main', url: 'https://github.com/faizrazadec/faizrazadec.github.io.git'
                 echo 'Code checkout completed.'
             }
         }
