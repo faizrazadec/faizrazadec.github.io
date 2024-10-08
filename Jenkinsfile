@@ -1,5 +1,10 @@
 pipeline {
-    agent any  // This will allow the pipeline to run on any available agent
+    agent {
+        docker {
+            image 'node:20.18.0'  // Use the appropriate Node.js version
+            args '-u root'  // Run the container as root user to avoid permission issues
+        }
+    }
 
     stages {
         stage('Checkout') {
