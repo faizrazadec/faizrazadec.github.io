@@ -13,13 +13,14 @@ import { textVariant } from '../utils/motion';
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
     contentStyle={{
-      background: '#eaeaec',
+      background: '#000017',
       color: '#292929',
       boxShadow:
-        'rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
+        'rgba(111, 195, 223, 0.1) 0px 0px 20px 8px, rgba(111, 195, 223, 0.05) 0px 0px 20px 8px',
+        border: '1px solid #ffffff'
     }}
     contentArrowStyle={{
-      borderRight: '7px solid  #232631',
+      borderRight: '10px solid  #ffffff',
     }}
     date={
       <div>
@@ -34,18 +35,22 @@ const ExperienceCard = ({ experience }) => (
         <img
           src={experience.icon}
           alt={experience.company_name}
-          className="w-[60%] h-[60%] object-contain"
+          className="w-[100%] h-[100%] object-contain"
         />
       </div>
     }>
     <div>
-      <h3 className="text-jetLight text-[24px] font-bold font-beckman tracking-[2px]">
+      <h3 className="text-eerieBlack text-[24px] font-bold font-beckman tracking-[2px]">
         {experience.title}
       </h3>
       <p
         className="text-taupe text-[22px] font-semibold font-overcameBold tracking-[1px]"
         style={{ margin: 0 }}>
         {experience.company_name}
+      </p>
+      <p className='text-taupe text-[18px] font-semibold font overcameBold tracking-[1px]'
+      style={{margin:0}}>
+        {experience.details}
       </p>
     </div>
   </VerticalTimelineElement>
@@ -70,16 +75,17 @@ const Experience = () => {
           ))}
           <VerticalTimelineElement
             contentStyle={{
-              background: '#eaeaec',
+              background: '#000017',
               color: '#292929',
               boxShadow:
-                'rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
+                'rgba(111, 195, 223, 0.1) 0px 0px 20px 8px, rgba(111, 195, 223, 0.05) 0px 0px 20px 8px',
+                border: '1px solid #ffffff',
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
             }}
             contentArrowStyle={{
-              borderRight: '7px solid  #232631',
+              borderRight: '10px solid  #ffffff',
             }}
             iconStyle={{ background: '#333333' }}
             icon={
@@ -87,22 +93,22 @@ const Experience = () => {
                 <img
                   src={resume}
                   alt="resume"
-                  className="w-[45%] h-[45%] object-contain"
+                  className="w-[90%] h-[90%] object-contain"
                 />
               </div>
             }>
             <button
               className="live-demo flex justify-between 
-              sm:text-[18px] text-[14px] text-timberWolf 
+              sm:text-[18px] text-[14px] text-darkblue 
               font-bold font-beckman items-center py-5 pl-3 pr-3 
               whitespace-nowrap gap-1 sm:w-[148px] sm:h-[58px] 
-              w-[125px] h-[46px] rounded-[10px] bg-jetLight 
+              w-[125px] h-[46px] rounded-[10px] bg-eerieBlack 
               sm:mt-[22px] mt-[16px] hover:bg-battleGray 
               hover:text-eerieBlack transition duration-[0.2s] 
               ease-in-out"
               onClick={() =>
                 window.open(
-                  'resume link', //paste the link to your resume here
+                  'https://github.com/faizrazadec/faizrazadec.github.io/blob/main/Faiz%20Raza%20-%20Resume.pdf', //paste the link to your resume here
                   '_blank'
                 )
               }

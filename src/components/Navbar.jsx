@@ -12,10 +12,10 @@ const Navbar = () => {
     <nav
       className={`${styles.paddingX} w-full flex items-center py-2 h-12 fixed 
       top-0 z-20 bg-battleGray sm:opacity-[1] xxs:h-[12vh]`}>
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+      <div className="w-full flex justify-between items-center sm:max-w-7xl xs:max-w-10xl sm:mx-auto xs:mx-auto">
         <Link
           to="/"
-          className="flex items-center gap-2"
+          className="flex items-center lg:gap-2 gap-3"
           onClick={() => {
             setActive('');
             window.scrollTo(0, 0);
@@ -23,7 +23,7 @@ const Navbar = () => {
           <img
             src={logo} // your logo comes here
             alt="logo"
-            className="sm:w-[50px] sm:h-[50px] w-[45px] h-[45px] object-contain"
+            className="sm:w-[50px] sm:h-[50px] w-[50px] h-[50px] object-contain"
           />
 
           {/* if you have text you want besides your logo it comes here.
@@ -31,7 +31,7 @@ const Navbar = () => {
           <img
             src={logotext}
             alt="logo"
-            className="sm:w-[300px] sm:h-[90px] w-[85px] h-[85px] -ml-[0.6rem] object-contain"
+            className="sm:w-[300px] sm:h-[90px] w-[85px] h-[85px] lg:-ml-[0.6rem] -ml-[0.9rem] object-contain"
           />
 
           {/* <span className={`${styles.logotext} text-eerieBlack lg:text-[20px] text-[20px] font-semibold uppercase tracking-wide -mt-0.45`}>
@@ -53,10 +53,10 @@ const Navbar = () => {
         </ul>
 
         {/* mobile */}
-        <div className="sm:hidden flex flex-1 w-screen justify-end items-center">
+        <div className="sm:hidden flex flex-1 w-[10px] justify-end items-center">
           {toggle ? (
             <div
-              className={`p-6 bg-flashWhite opacity-[0.98] absolute 
+              className={`p-6 bg-battleGray absolute 
                 top-0 left-0 w-screen h-[100vh] z-10 menu ${
                   toggle ? 'menu-open' : 'menu-close'
                 }`}>
@@ -70,15 +70,15 @@ const Navbar = () => {
               </div>
               <ul
                 className="list-none flex flex-col -gap-[1rem] 
-                items-start justify-end mt-[10rem] -ml-[35px]">
+                items-start justify-end mt-[1rem] -ml-[2px]">
                 {navLinks.map((nav) => (
                   <li
                     id={nav.id}
                     key={nav.id}
                     className={`${
                       active === nav.title ? 'text-french' : 'text-eerieBlack'
-                    } text-[88px] font-bold font-arenq 
-                      uppercase tracking-[1px] cursor-pointer`}
+                    } sm:-text-[14px] font-bold font-arenq 
+                      uppercase tracking-[10px] cursor-pointer`}
                     onClick={() => {
                       setToggle(!toggle);
                       setActive(nav.title);

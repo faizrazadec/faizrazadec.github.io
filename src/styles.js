@@ -12,6 +12,7 @@ const styles = {
   flexStart: 'flex justify-start items-start',
   flexEnd: 'flex justify-end',
   navPadding: 'pt-[98px]',
+  halfWidth: 'w-full xl:w-1/2 mr-auto',
 
   paddingX: 'sm:px-16 px-6',
   paddingY: 'sm:py-16 py-6',
