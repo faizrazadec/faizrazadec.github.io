@@ -23,6 +23,16 @@ import resume from './icons/resume.png';
 import send from './icons/send.png';
 import sendHover from './icons/sendHover.png';
 
+import python from './tech/python.png';
+import kaggle from './tech/kaggle.png';
+import ubuntu from './tech/ubuntu.png';
+import linux from './tech/linux.png';
+import flask from './tech/flask.png';
+import streamlit from './tech/streamlit.svg';
+import colab from './tech/colab.png';
+import jupyter from './tech/jupyter.svg';
+import aws from './tech/aws.png';
+import jenkins from './tech/jenkins.png';
 import css from './tech/css.png';
 import docker from './tech/docker.png';
 import figma from './tech/figma.png';
@@ -56,23 +66,33 @@ export {
   whiteabstract,
   worldmap,
   logo,
+  streamlit,
   logotext,
   shaq,
   backend,
   ux,
+  python,
   frontend,
   prototyping,
   github,
   close,
+  aws,
+  linux,
   download,
+  colab,
   downloadHover,
+  jupyter,
+  jenkins,
   pineapple,
   pineappleHover,
   menu,
   resume,
+  ubuntu,
   send,
   sendHover,
+  kaggle,
   css,
+  flask,
   docker,
   figma,
   git,

@@ -6,13 +6,19 @@ import {
   javascript,
   typescript,
   html,
+  linux,
+  ubuntu,
+  jenkins,
   css,
   reactjs,
   redux,
   tailwind,
   nodejs,
   git,
+  streamlit,
+  aws,
   figma,
+  jupyter,
   docker,
   postgresql,
   rubyrails,
@@ -21,6 +27,10 @@ import {
   leaderboard,
   math,
   movie,
+  python,
+  flask,
+  kaggle,
+  colab,
   nyeusi,
   space,
   coverhunt,
@@ -66,47 +76,47 @@ const services = [
 const technologies = [
   {
     name: 'Python',
-    icon: html,
+    icon: python,
   },
   {
     name: 'Flask',
-    icon: css,
+    icon: flask,
   },
   {
     name: 'AWS',
-    icon: javascript,
+    icon: aws,
   },
   {
     name: 'Jupyter',
-    icon: typescript,
+    icon: jupyter,
   },
   {
     name: 'Colab',
-    icon: reactjs,
+    icon: colab,
   },
   {
-    name: 'Keggle',
-    icon: redux,
+    name: 'Kaggle',
+    icon: kaggle,
   },
   {
-    name: 'Yolo',
-    icon: tailwind,
+    name: 'Streamlit',
+    icon: streamlit,
   },
   {
     name: 'CSS',
-    icon: nodejs,
+    icon: css,
   },
   {
     name: 'HTML',
-    icon: rubyrails,
+    icon: html,
+  },
+  {
+    name: 'Ubuntu',
+    icon: ubuntu,
   },
   {
     name: 'Linux',
-    icon: graphql,
-  },
-  {
-    name: 'SQL',
-    icon: postgresql,
+    icon: linux,
   },
   {
     name: 'Git',
@@ -114,7 +124,7 @@ const technologies = [
   },
   {
     name: 'Jenkins',
-    icon: figma,
+    icon: jenkins,
   },
   {
     name: 'Docker',
