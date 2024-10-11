@@ -108,7 +108,7 @@ const Experience = () => {
               ease-in-out"
               onClick={() =>
                 window.open(
-                  'https://github.com/faizrazadec/faizrazadec.github.io/blob/main/Faiz%20Raza%20-%20Resume.pdf', //paste the link to your resume here
+                  '', //paste the link to your resume here
                   '_blank'
                 )
               }
