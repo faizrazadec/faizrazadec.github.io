@@ -1,1 +1,0 @@
-# faizrazadec.github.io
